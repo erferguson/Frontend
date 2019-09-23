@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { GoogleButton, FaceBookButton } from "../components/button";
+import { GoogleButton, FaceBookButton, LoginButton } from "../components/button";
+import { Link } from "react-router-dom";
 
 
 //styled components
@@ -21,6 +22,13 @@ width: 100%;
 text-align: center;
 `;
 
+const PasswordText = styled.input`
+width: 100%;
+margin-top: 10%;
+text-align: center;
+`;
+
+
 export default function LoginScreen () {
     return (
         <div>
@@ -33,6 +41,9 @@ export default function LoginScreen () {
                 <br></br>
             
             <EmailText type="text" placeholder="Email" />
+            <PasswordText type="text" placeholder="Password"/>
+                <Link>Forgot your password?</Link>
+            <LoginButton/>
         </div>
     )
 };
